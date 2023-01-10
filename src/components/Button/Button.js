@@ -9,7 +9,7 @@ const Button = ({ handleClick, label }) => {
       className="waves-effect waves-light btn-large blue"
       onClick={handleClick}
     >
-      <p>QUOTE</p>
+      <p>NEXT</p>
     </div>
   );
 };
