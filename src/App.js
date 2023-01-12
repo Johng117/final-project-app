@@ -19,7 +19,7 @@ function App() {
       // let randomNumber = Math.floor(Math.random()*quoteList.length)
       // console.log("random", randomNumber)
       // setQuote(quoteList[randomNumber])
-      fetch("http://10.0.40.63:3000/quote")
+      fetch("http://10.0.40.63:3001/quote")
         .then(function (response) {
           if (response.ok) {
             return response.json();
