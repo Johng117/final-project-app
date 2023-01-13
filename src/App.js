@@ -6,7 +6,7 @@ import "materialize-css/dist/css/materialize.min.css";
 
 function App() {
   const [isClicked, setIsClicked] = useState(false);
-  const [quote, setQuote] = useState({});
+  const [quote, setQuote] = useState([]);
 
   // function to handle click event and update state of isClicked
   const handleClick = () => {
@@ -20,7 +20,7 @@ function App() {
         if (response.ok) {
           return response.json();
         }
-        throw `${response.status} ${response.statusText}`;
+        throw new Error("Error");
       })
       .then(function (quote) {
         console.log(quote);
@@ -34,7 +34,7 @@ function App() {
   useEffect(() => {
     ranQuote();
   }, [isClicked]);
-  console.log(quote);
+ 
   return (
     <div className="container">
       <div className="row button-row">
