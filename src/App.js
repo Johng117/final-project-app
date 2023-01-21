@@ -18,6 +18,7 @@ function App() {
     fetch(`http://${process.env.API}:3001/quote`)
       .then(function (response) {
         if (response.ok) {
+          console.log(`${process.env.API}`);
           return response.json();
         }
         throw new Error("Error");
