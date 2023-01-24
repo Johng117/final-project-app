@@ -15,7 +15,7 @@ function App() {
 
   // function that creates a random number and updates setQuote with another quote that has the index of the random number
   const ranQuote = () => {
-    fetch(`http://${process.env.REACT_APP_API_URL}:3001/quote`)
+    fetch(`http://34.200.255.196:3001/quote`)
       .then(function (response) {
         if (response.ok) {
           return response.json();
